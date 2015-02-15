@@ -46,3 +46,4 @@ Les deux programmes ont besoins d'un cerain nombre de paquets pour tourner.
   ```
 
 ### Snapshot:
+![petite capture d ecran](images/twee.png)

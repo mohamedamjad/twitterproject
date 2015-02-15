@@ -61,13 +61,13 @@ if(bounds=$.urlParam('bounds')){
 rect=JSON.parse(bounds);
 map.fitBounds(L.latLngBounds([rect[1],rect[0]],[rect[3],rect[2]]));
 }
-// All of this to add a simple button on top of the map
+// Ajouter le petit bouton en haut de la page
 MyControl = L.Control.extend({
 options: {
 position: 'topleft'
 },
 onAdd: function (map) {
-// create the control container with a particular class name
+// créer le container control
 var container = L.DomUtil.create('div', 'my-custom-control');
 controlUI = L.DomUtil.create('button', 'toggle-tweet', container);
 return container;
@@ -77,7 +77,7 @@ map.addControl(new MyControl());
 var myBut=$(".toggle-tweet")
 myBut.text("Hide");
 myBut.click(toggleTweets);
-// End of button extra
+// Fin de boutton extra
 for(var i=0;i<NB_TWEETS;i++){
 hover_bubble.push(new L.Popup({ offset: new L.Point(0,-10), closeButton: false, autoPan: false }));
 }

@@ -1,3 +1,5 @@
+# Mohamed Amjad LASRI
+
 # Import the necessary methods from tweepy library
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
@@ -8,10 +10,10 @@ import json
 from json import dumps
 
 #Variables that contains the user credentials to access Twitter API 
-consumer_key = "VMjYQOrDiXB2Qj3yoZpejDB0W"
-consumer_secret = "B7F3PUjVAMMqe27rAUkdQI6ug6QqlFepWEQwPwD3hib6HQw18U"
-access_token = "728128849-LjDlVuIIMQMydMAcG2b2BKjMfUSJNsLPaUkYNbCo"
-access_token_secret = "O5ETQfVwZ4ciRH3CKhpxN9MBXOw7xcllJJSJ3lEg19YhV"
+consumer_key = ""
+consumer_secret = ""
+access_token = ""
+access_token_secret = ""
 
 
 #This is a basic listener that just prints received tweets to stdout.
@@ -44,7 +46,6 @@ if __name__ == '__main__':
     auth.set_access_token(access_token, access_token_secret)
     stream = Stream(auth, l)
 
-    # researched words
 
     #This line filter Twitter Streams to capture data by the keywords: 'python', 'javascript', 'ruby'
     stream.filter(track=sys.argv)

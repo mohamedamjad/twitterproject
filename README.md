@@ -23,7 +23,26 @@ Les deux programmes ont besoins d'un cerain nombre de paquets pour tourner.
   
   Il suffit de lancer :
 
-````
-sudo npm install
-````
+  ````
+   sudo npm install
+   ````
 
+### Lancer les programmes:
+
+- Lancer le programme Python:
+  
+  Il faut d'abord renseigner les HashTag que vous voulez suivre. Pour cela éditer le fichier launch.sh et lancer le après en utilisant les deux commandes suivantes:
+
+  ```
+  vi launch.sh
+  ./launch.sh
+  ```
+  
+  - Lancer le serveur NodeJS:
+  
+  Il suffit de lancer la commande suivante:
+  ```
+  node tweet.js
+  ```
+
+### Snapshot:

@@ -1,8 +1,8 @@
 # twitterproject
-récolter et représenter les tweets en temps réel. Pour pouvoir lancer les programme il faut d'abord enregistrer un compte application sur apps.twitter.com pour obtenir les 4 codes d'accès nécéssaires au streaming.
+récolter et représenter les tweets en temps réel. Pour pouvoir lancer les programmes il faut d'abord enregistrer un compte application sur apps.twitter.com pour obtenir les 4 codes d'accès nécéssaires au streaming.
 ### Dans ce dépôt:
 
-Dans ce dépôt deux programmes qui sont destinés à tourner côté serveur pour récolter les tweets sur un hashtag en temps réel. Le premier script python se contente de les stocker dans une base de données et d'effectuer quelque requêtes de base. le script JS tourne dans un service NodeJS, à l'aide des websockets il "stream" les positions des tweets géolocalisés vers une page htl cliente qui les places sur un fonds de carte en utiliasnt heatmap/leaflet.
+Dans ce dépôt deux programmes qui sont destinés à tourner côté serveur pour récolter les tweets sur un hashtag en temps réel. Le premier script python se contente de les stocker dans une base de données et d'effectuer quelque requêtes de base. le script JS tourne dans un service NodeJS, à l'aide des websockets il "stream" les positions des tweets géolocalisés vers une page html cliente qui les places sur un fonds de carte en utilisant heatmap/leaflet.
 
 ### satisfaire les dépendances:
 Les deux programmes ont besoins d'un cerain nombre de paquets pour tourner.
@@ -46,3 +46,4 @@ Les deux programmes ont besoins d'un cerain nombre de paquets pour tourner.
   ```
 
 ### Snapshot:
+![petite capture d ecran](image/twee.png)

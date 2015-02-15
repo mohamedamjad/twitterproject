@@ -17,11 +17,11 @@ var world = [ '-180', '-90', '180', '90' ];
 var total=0;
 var totalSent=0;
 
-var T = new Twit({  // You need to setup your own twitter configuration here!
-  consumer_key:    'VMjYQOrDiXB2Qj3yoZpejDB0W',
-  consumer_secret: 'B7F3PUjVAMMqe27rAUkdQI6ug6QqlFepWEQwPwD3hib6HQw18U',
-  access_token:    '728128849-LjDlVuIIMQMydMAcG2b2BKjMfUSJNsLPaUkYNbCo',
-  access_token_secret:'O5ETQfVwZ4ciRH3CKhpxN9MBXOw7xcllJJSJ3lEg19YhV'
+var T = new Twit({  // ajouter vos codes d'accès twitter ici!
+  consumer_key:    '',
+  consumer_secret: '',
+  access_token:    '',
+  access_token_secret:''
 });
 
 var stream = T.stream('statuses/filter', { track: ['us','@SNCF','sncf','SNCF']});

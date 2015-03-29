@@ -106,7 +106,7 @@ window.history.pushState("TweetOMap","TweetOMap","/?bounds=["+map.getBounds().to
 if(socket)socket.emit("recenter",map.getBounds().toBBoxString());
 }
 function startSocket(){
-socket = io.connect('localhost:8080', {query: "bounds=["+map.getBounds().toBBoxString()+"]"});
+socket = io.connect('3a36aefee6.testurl.ws', {query: "bounds=["+map.getBounds().toBBoxString()+"]"});
 socket.on('stream', function(tweet){
 addPoint(tweet);
 });

@@ -20,10 +20,10 @@ var total=0;
 var totalSent=0;
 
 var T = new Twit({  // You need to setup your own twitter configuration here!
-  consumer_key:    'xHrUMAJfLrksvpaG1WiJm5TpR',
-  consumer_secret: 'k0lQrAuhe7jh0Dx9IALY8g63RZgKG3aIAcrCslWN7ireHPJJCw',
-  access_token:    '728128849-LjDlVuIIMQMydMAcG2b2BKjMfUSJNsLPaUkYNbCo',
-  access_token_secret:'O5ETQfVwZ4ciRH3CKhpxN9MBXOw7xcllJJSJ3lEg19YhV'
+  consumer_key:    '',
+  consumer_secret: '',
+  access_token:    '',
+  access_token_secret:''
 });
 
 var stream = T.stream('statuses/filter', { locations: world});

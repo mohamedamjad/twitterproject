@@ -1,3 +1,4 @@
+// Mohamed AMJAD lasri
 var express = require('express'),
 app = express(),
 http = require('http'),
@@ -10,6 +11,7 @@ server.listen(8080);
 // routing
 app.get('/', function (req, res) {
   console.log(req.headers);
+  res.sendFile(__dirname + '/index.html');
 });
 app.use(express.static(__dirname + '/public'));
 
@@ -17,14 +19,14 @@ var world = [ '-180', '-90', '180', '90' ];
 var total=0;
 var totalSent=0;
 
-var T = new Twit({  // ajouter vos codes d'accès twitter ici!
-  consumer_key:    '',
-  consumer_secret: '',
-  access_token:    '',
-  access_token_secret:''
+var T = new Twit({  // You need to setup your own twitter configuration here!
+  consumer_key:    'xHrUMAJfLrksvpaG1WiJm5TpR',
+  consumer_secret: 'k0lQrAuhe7jh0Dx9IALY8g63RZgKG3aIAcrCslWN7ireHPJJCw',
+  access_token:    '728128849-LjDlVuIIMQMydMAcG2b2BKjMfUSJNsLPaUkYNbCo',
+  access_token_secret:'O5ETQfVwZ4ciRH3CKhpxN9MBXOw7xcllJJSJ3lEg19YhV'
 });
 
-var stream = T.stream('statuses/filter', { track: ['us','@SNCF','sncf','SNCF']});
+var stream = T.stream('statuses/filter', { locations: world});
 stream.on('error',function(error){
   console.log(error);
 });
@@ -32,8 +34,7 @@ stream.on('limit', function (limitMessage) {
   console.log("Limit:"+JSON.stringify(limitMessage));
 });
 stream.on('tweet', function (tweet) {
- if(tweet.geo){  
- console.log('OK');
+  if(tweet.geo){
     total+=1;
     var coords=tweet.geo.coordinates;
     clients.forEach(function(socket){
